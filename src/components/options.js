@@ -28,7 +28,7 @@ function Option({ item, watch, errors, control, type }) {
 
     let _onchanged = (value, onChange) => {
         let itemGlobalData=[value.target.value]
-        if(type!="radio"){
+        if(type!=="radio"){
             let _checkedValue = checked;
             _checkedValue[value.target.value] = value.target.checked;
             setChecked(_checkedValue);
