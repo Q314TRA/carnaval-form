@@ -87,7 +87,7 @@ function App() {
           <span>Carnaval cannabico 2021</span>
         </Col>
         <Col md={5} lg={4} className='banner-left'  >
-          <img src={logo} />
+          <img alt='logo' src={logo} />
         </Col>
       </Row>
 

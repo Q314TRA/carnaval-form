@@ -5,7 +5,7 @@ function SuccessComponent({ logo }) {
         window.location.reload()
     }
     return (<div className='main-success'>
-        <img className='logo-success' src={logo}></img>
+        <img alt='logo' className='logo-success' src={logo}></img>
         <div className='content-text-success' >
             <p>Gracias por hacer parte de nuestra comunidad, <wbr />reclama tu obsequio en el punto autorizado del evento, <br />¡Buenos humos!</p>
             <br />
