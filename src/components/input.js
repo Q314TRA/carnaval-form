@@ -1,10 +1,8 @@
-import { Col, Form } from 'react-bootstrap';
-import { useForm } from "react-hook-form";
-import FormComponent from './formWraper';
+import {  Form } from 'react-bootstrap';
 
-function Input({ item, onChange, type, register, errors }) {
+function Input({ item, type, register, errors }) {
 
-    // return (<FormComponent onChange={onChange} ref={refFrom} component={(register, errors) => {
+    
     return <Form.Group className="mb-3" controlId={item.key}>
         <Form.Label>{item.name}</Form.Label>
         <Form.Control type={type} placeholder={`Ingrese su ${String(item.name).toLocaleLowerCase()}`} {...register(item.key, { required: item.required })} />
@@ -15,7 +13,6 @@ function Input({ item, onChange, type, register, errors }) {
         }
     </Form.Group>
 
-    // }} />);
 }
 
 
