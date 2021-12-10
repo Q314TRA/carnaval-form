@@ -1,6 +1,6 @@
 @font-face {
   font-family: "stentiga";
-  src: url("./assets/stentiga.ttf");
+  src: url("http://carnavalcannabico.com/wp-content/carnaval/stentiga.ttf");
 }
 
 body, html{ 
@@ -79,6 +79,7 @@ label.form-label{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: rgb(65, 140, 77);
 }
 
 .logo-success{

@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useForm, Controller } from "react-hook-form";
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import banner from './assets/olmes.jpg';
-import logo from './assets/icono_white.png';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -77,17 +75,17 @@ function App() {
   }
 
   if (isDelivery)
-    return <SuccessComponent logo={logo} />
+    return <SuccessComponent />
 
   return (
     <Container fluid className='main'>
       <Row className='content-banner mb-5'>
 
-        <Col md={7} lg={8} className='banner-right' style={{ backgroundImage: `url(${banner})` }} >
+        <Col md={7} lg={8} className='banner-right' style={{ backgroundImage: `url(http://carnavalcannabico.com/wp-content/carnaval/olmes.jpg)` }} >
           <span>Carnaval cannabico 2021</span>
         </Col>
         <Col md={5} lg={4} className='banner-left'  >
-          <img alt='logo' src={logo} />
+          <img alt='logo' src='http://carnavalcannabico.com/wp-content/carnaval/icono_white.png' />
         </Col>
       </Row>
 
