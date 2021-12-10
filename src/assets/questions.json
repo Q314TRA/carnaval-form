@@ -1,0 +1,163 @@
+[
+    {
+        "name": "Nombre",
+        "key": "name",
+        "type": "text",
+        "required": true
+    },
+    {
+        "name": "Telefono",
+        "key": "phone",
+        "type": "number",
+        "required": true
+    },
+    {
+        "name": "Genero",
+        "key": "genere",
+        "type": "select",
+        "options":["Femenino" ,"Masculino" ,"Transgénero" ,"non-conforming" ],
+        "required": true
+    },
+    {
+        "name": "Edad",
+        "key": "age",
+        "type": "select",
+        "options":["Menor de 14 años","Entre 15 y 17 años","Entre 18 y 25 años","Entre 26 y 35 años","Entre 36 y 45 años","Entre 46 y 55 años","Mayores de 55 años" ],
+        "required": true
+    },
+    {
+        "name": "Ciudad",
+        "key": "city",
+        "type": "select",
+        "options":[ "Barbosa","Girardota","Copacabana","Bello","Medellín","Envigado","Itagüí","Sabaneta","La Estrella","Caldas","Otra Ciudad de antioquia","Otra Ciudad fuera de antioquia" ],
+        "required": true
+    },
+    {
+        "name": "Sector donde vive",
+        "key": "sectionCity",
+        "depend":"city",
+        "type": "select",
+        "options":{
+            "Barbosa" : ["Barbosa"],
+            "Girardota" : ["Girardota"],
+            "Copacabana" : ["Copacabana"],
+            "Bello" : ["COMUNA 1. París","COMUNA 2. La Madera","COMUNA 3. Santa Ana","COMUNA 4. Suárez","COMUNA 5. La Cumbre","COMUNA 6. Bellavista","COMUNA 7. Altos de Niquía","COMUNA 8. Niquía","COMUNA 9. Guasimalito","COMUNA 10. Fontidueño","COMUNA 11. Zamora","VEREDA"],
+            "Medellín" : ["Comuna 1 – Popular" ,"Comuna 2 - Santa Cruz" ,"Comuna 3 – Manrique" ,"Comuna 4 – Aranjuez" ,"Comuna 5 – Castilla" ,"Comuna 6 - Doce de octubre" ,"Comuna 7 – Robledo" ,"Comuna 8 - Villa Hermosa" ,"Comuna 9 - Buenos Aires" ,"Comuna 10 - La Candelaria" ,"Comuna 11 - Laureles—Estadio" ,"Comuna 12 - La América" ,"Comuna 14 – Poblado" ,"Comuna 15 – Guayabal" ,"Comuna 16 - Belén" ,"Corregimiento" ],
+            "Envigado" : ["Envigado" ],
+            "Itagüí" : ["Itagüí" ],
+            "Sabaneta " : ["Sabaneta " ],
+            "La Estrella " : ["La Estrella " ],
+            "Caldas" : ["Caldas" ]
+        },
+        "required": true
+    },
+    {
+        "name": "¿A qué te dedicas? ",
+        "key": "ocupation",
+        "type": "option",
+        "options":[ "Empleado" ,"Independiente","Pensionado","Estudiante / Bachiller","Estudiante / Universitario" ],
+        "required": true
+    },
+    {
+        "name": "Qué uso le das al cannabis",
+        "key": "use",
+        "type": "option",
+        "options":[ "Medicinal","Recreativo","Medicinal y recreativo","Investigación","Cultivo","Rituales","Otro"  ],
+        "required": true
+    },
+    {
+        "name": "¿Qué enfermedad tratas?",
+        "key": "patology",
+        "depend":"use",
+        "showIf":["Medicinal", "Medicinal y recreativo"],
+        "type": "option",
+        "options":[ "Cáncer","Asma"  ,"Dolor Crónico" ,"Epilepsia" ,"Migraña" ,"Insomnio"  ,"Estrés"  ,"Ansiedad" ,"Depresión" ,"Otro" ],
+        "required": true
+    },
+    {
+        "name": "¿Estás recetado por un especialista? ",
+        "key": "isAttendign",
+        "depend":"use",
+        "showIf":["Medicinal", "Medicinal y recreativo"],
+        "type": "radio",
+        "options":[ "Si", "No" ],
+        "required": true
+    },
+    {
+        "name": "¿Qué tipo de producto usas?",
+        "key": "productUsed",
+        "depend":"use",
+        "showIf":["Medicinal", "Medicinal y recreativo"],
+        "type": "option",
+        "options":[ "Aceite" ,"Gotas" ,"Cremas" ,"Hierva" ,"Vaporizador" ,"Otro"  ],
+        "required": true
+    },
+    {
+        "name": "¿Cada cuánto compras cannabis?",
+        "key": "refillInterval",
+        "type": "select",
+        "options":[ "Diario" ,"Semanal" ,"Quincenal" ,"Mensual" , "Autocultivo", "Otro"],
+        "required": true
+    },
+    {
+        "name": "¿Dónde haces la compra de esta?",
+        "key": "providerLocation",
+        "type": "option",
+        "options":["Plazas","Redes sociales","Conocidos","Dealers","Autocultivo","Fuera del país","Empresas licenciadas","Otro" ],
+        "required": true
+    },
+    {
+        "name": "En la siguiente escala, califiques los efectos que has tenido con el tratamiento?",
+        "key": "heltProfit",
+        "depend":"use",
+        "showIf":["Medicinal", "Medicinal y recreativo"],
+        "type": "option",
+        "options":[ "Muy positivos","Positivos","Ni positivos ni negativos","Negativos" ],
+        "required": true
+    },
+    {
+        "name": "¿En qué lugares consumes habitualmente?",
+        "key": "useLocation",
+        "depend":"use",
+        "showIf":["Recreativo", "Medicinal y recreativo"],
+        "type": "option",
+        "options":["Casa","Sitios públicos","Donde un amigo","Eventos","Fincas" ],
+        "required": true
+    },
+    {
+        "name": "Aceptan en su núcleo familiar su consumo de Cannabis?",
+        "key": "familyAllow",
+        "depend":"use",
+        "showIf":["Recreativo", "Medicinal y recreativo"],
+        "type": "radio",
+        "options":["Si", "No"],
+        "required": true
+    },
+    {
+        "name": "Has tenido alguna experiencia negativa con el producto comprado al microtráfico?",
+        "key": "hasNegativeExperience",
+        "depend":"use",
+        "showIf":["Recreativo", "Medicinal y recreativo"],
+        "type": "radio",
+        "options":["Si", "No"],
+        "required": true
+    },
+    {
+        "name": "Has sido víctima de atropellos por parte de funcionarios públicos por consumir cannabis?",
+        "key": "hasPoliticAttack",
+        "depend":"use",
+        "showIf":["Recreativo", "Medicinal y recreativo"],
+        "type": "radio",
+        "options":["Si", "No"],
+        "required": true
+    },
+    {
+        "name": "¿Conoces las leyes actuales que regulan el consumo del cannabis?",
+        "key": "knowPolicis",
+        "depend":"use",
+        "showIf":["Recreativo", "Medicinal y recreativo"],
+        "type": "radio",
+        "options":["Si", "No"],
+        "required": true
+    }
+]
