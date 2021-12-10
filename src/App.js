@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { useForm, Controller } from "react-hook-form";
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import banner from './assets/olmes.jpg';
